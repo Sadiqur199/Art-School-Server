@@ -10,8 +10,6 @@ const port = process.env.Port || 5000
 app.use(cors())
 app.use(express.json())
 
-
-
 //json web token verify function
 
 const verifyJwt = (req , res , next) =>{
