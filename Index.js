@@ -26,7 +26,6 @@ const verifyJwt = (req , res , next) =>{
    if(error){
      return res.status(401).send({error: true , message: 'unAuthorized access '})
    }
- 
    req.decoded = decoded
    next();
 
@@ -46,7 +45,6 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 });
-
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
